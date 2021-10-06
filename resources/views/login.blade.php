@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="col-lg-12">
-                                <button class="btn btn-primary btn-block">Login</button>
+                                <button class="btn btn-block">LOGIN</button>
                             </div>
                         </div>
                     </div>
