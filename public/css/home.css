@@ -23,3 +23,14 @@
 .icon {
     width: 2.5rem;
 }
+
+li:hover {
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    color: #3D5AF1;
+}
