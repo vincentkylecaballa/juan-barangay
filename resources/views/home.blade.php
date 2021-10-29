@@ -14,12 +14,9 @@
 </head>
 
 <body>
-
-
-
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3" style="position: fixed">
                 <div class="nav-sidebar">
                     <ul class="nav flex-column">
                         <div class="nav-image">
@@ -72,7 +69,7 @@
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="nav-link h-20" href=""><img class="icon ml-3 mr-3 p-2"
+                                <a class="nav-link h-20" href="/about"><img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-about.png" alt="">About the Team</a>
                             </div>
                         </li>
@@ -80,7 +77,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9 scrollit">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-9">
@@ -99,6 +96,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        
                     </div>
                 </div>
             </div>
