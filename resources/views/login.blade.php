@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Log In | JuanBarangay</title>
 </head>
 
 <body>
-    <script type="text/javascript" src="{{ asset('js/home.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/login.js') }}"></script>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-5">
@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="col-lg-12">
-                                <button class="btn btn-block">LOGIN</button>
+                                <button formaction="/home" class="btn btn-block">LOGIN</button>
                             </div>
                         </div>
                     </div>

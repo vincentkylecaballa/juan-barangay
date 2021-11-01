@@ -36,14 +36,14 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="align-items-center nav-link active" href="/"><img
+                                    <a class="align-items-center nav-link active" href="/home"><img
                                             class="icon ml-3 mr-3 p-2" src="assets/icons8-home.png" alt="">Home</a>
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="/"><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="/brgyofficers"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-manager.png" alt="">Barangay Officials</a>
                                 </div>
 
@@ -51,14 +51,14 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="#"> <img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="/population"> <img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-people.png" alt="">Barangay Population</a>
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="#"><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="/calendar"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-calendar.png" alt="">Calendar of Activities</a>
                                 </div>
                             </li>
@@ -67,7 +67,7 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href=""><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="/forms"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-document.png" alt="">Barangay Forms</a>
                                 </div>
                             </li>
@@ -125,28 +125,35 @@
                                 </div>
                                 <div class="row p-3">
                                     <div class="col-md-6">
-                                        <div class="card" style="height: 15rem">
+                                        <div class="card" style="height: 12rem">
                                             <div class="row">
                                                 <div class="col-md-4">
 
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="member-title">
-                                                        <h3>Ken Zyrus Itulid</h3>
+                                                        <h3 class="pt-5 pb-2">Ken Zyrus Itulid</h3>
+
+                                                    </div>
+                                                    <div class="member-subtitle">
+                                                        <h6>Team Lead/Back End Developer</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="card" style="height: 15rem">
+                                        <div class="card" style="height: 12rem">
                                             <div class="row">
                                                 <div class="col-md-4">
 
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="member-title">
-                                                        <h3>Vincent Kyle Caballa</h3>
+                                                        <h3 class="pt-5 pb-2">Vincent Kyle Caballa</h3>
+                                                    </div>
+                                                    <div class="member-subtitle">
+                                                        <h6>Front End Developer and Technical Writer</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,28 +162,34 @@
                                 </div>
                                 <div class="row p-3">
                                     <div class="col-md-6">
-                                        <div class="card" style="height: 15rem">
+                                        <div class="card" style="height: 12rem">
                                             <div class="row">
                                                 <div class="col-md-4">
-
+                                                    <img src="" alt="">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="member-title">
-                                                        <h3>Daniel Lee James Borgoña</h3>
+                                                        <h3 class="pt-5 pb-2">Daniel Lee James Borgoña</h3>
+                                                    </div>
+                                                    <div class="member-subtitle">
+                                                        <h6>Database Developer</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="card" style="height: 15rem">
+                                        <div class="card" style="height: 12rem">
                                             <div class="row">
                                                 <div class="col-md-4">
 
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="member-title">
-                                                        <h3>Charles Enzoe Correa</h3>
+                                                        <h3 class="pt-5 pb-2">Charles Enzoe Correa</h3>
+                                                    </div>
+                                                    <div class="member-subtitle">
+                                                        <h6>Back End Developer</h6>
                                                     </div>
                                                 </div>
                                             </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/population.css') }}" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -29,14 +29,14 @@
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="align-items-center nav-link active" href="#"><img class="icon ml-3 mr-3 p-2"
+                                <a class="align-items-center nav-link active" href="/officer"><img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-home.png" alt="">Home</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="nav-link" href="#"><img class="icon ml-3 mr-3 p-2"
+                                <a class="nav-link" href="/brgyofficers"><img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-manager.png" alt="">Barangay Officials</a>
                             </div>
 
@@ -44,14 +44,14 @@
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="nav-link" href="#"> <img class="icon ml-3 mr-3 p-2"
+                                <a class="nav-link" href="/population"> <img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-people.png" alt="">Barangay Population</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="nav-link" href="#"><img class="icon ml-3 mr-3 p-2"
+                                <a class="nav-link" href="/calendar"><img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-calendar.png" alt="">Calendar of Activities</a>
                             </div>
                         </li>
@@ -60,7 +60,7 @@
 
                         <li class="nav-item">
                             <div class="col-md-12">
-                                <a class="nav-link" href=""><img class="icon ml-3 mr-3 p-2"
+                                <a class="nav-link" href="/forms"><img class="icon ml-3 mr-3 p-2"
                                         src="assets/icons8-document.png" alt="">Barangay Forms</a>
                             </div>
                         </li>

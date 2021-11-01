@@ -11,14 +11,34 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('login');
 });
+*/
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/brgyofficers', function () {
+    return view('brgyofficers');
+});
+
+Route::get('/population', function () {
+    return view('population');
+});
+
+Route::get('/forms', function () {
+    return view('forms');
+});
+
+Route::get('/calendar', function () {
+    return view('calendar');
+});
+
+
