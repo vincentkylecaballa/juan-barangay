@@ -40,6 +40,14 @@ li:hover {
 }
 
 
+/** title page **/
+
+.population-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+
 /** button **/
 
 .add-event {
@@ -47,14 +55,6 @@ li:hover {
     font-weight: 500;
     color: white;
     background-color: #3D5AF1;
-}
-
-
-/** title page **/
-
-.calendar-title {
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
 }
 
 

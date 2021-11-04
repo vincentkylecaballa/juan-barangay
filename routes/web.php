@@ -11,11 +11,11 @@
 |
 */
 
-/*
+
 Route::get('/', function () {
-    return view('login');
+    return view('Login');
 });
-*/
+
 
 Route::get('/home', function () {
     return view('home');
@@ -40,5 +40,9 @@ Route::get('/forms', function () {
 Route::get('/calendar', function () {
     return view('calendar');
 });
+
+Route::get('event/add','EventController@createEvent');
+Route::post('event/add','EventController@store');
+Route::get('event','EventController@calendar');
 
 

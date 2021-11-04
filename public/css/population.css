@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.col-lg-3 {
+    background-color: #3D5AF1;
+    height: 100vh;
+}
+
+.nav-sidebar {
+    position: fixed;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+.nav-title {
+    color: #E2F3F5;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+.nav-image img {
+    width: 20rem;
+}
+
+.icon {
+    width: 2.5rem;
+}
+
+li:hover {
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    color: #3D5AF1;
+}
+
+
+/** title page **/
+
+.population-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+label {
+    font-family: 'Rubik', sans-serif;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font: bold;
+}
+
+.modal-title {
+    font-family: 'Rubik', sans-serif;
+    font: bolder;
+}

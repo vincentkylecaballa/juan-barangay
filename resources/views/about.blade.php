@@ -80,13 +80,11 @@
                                             src="assets/icons8-about.png" alt="">About the Team</a>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
-
                 </div>
-
             </div>
+
             <div class="col-lg-9">
                 <div class="col-md-12">
                     <div class="container">
@@ -206,6 +204,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </body>
 
 </html>
