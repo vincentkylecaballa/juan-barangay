@@ -37,7 +37,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3">
                 @if (Route::has('Login'))
                     <div class="position-fixed">
                         <div class="nav-sidebar">
@@ -102,7 +102,7 @@
                 @endif
             </div>
             
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-md-9">
                 <div class="col-md-12">
                     <div class="container-fluid">
                         <div class="row">
