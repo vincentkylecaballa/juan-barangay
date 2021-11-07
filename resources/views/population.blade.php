@@ -87,125 +87,160 @@
             </div>
             <div class="col-lg-9">
                 <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h1 class="pt-5 population-title">Barangay Population</h1>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="dropdown pt-5">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h1 class="pt-5 population-title">Barangay Population</h1>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dropdown pt-5">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <a href="" class="btn add-event m-3" data-toggle="modal" data-target="#BarangayRecord">Add Barangay
-                        Resident</a>
+                        <div class="row">
+                            <table class="table mt-5">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">LAST NAME</th>
+                                        <th scope="col">FIRST NAME</th>
+                                        <th scope="col">MIDDLE NAME</th>
+                                        <th scope="col">GENDER</th>
+                                        <th scope="col">CIVIL STATUS</th>
+                                        <th scope="col">RESIDENT STATUS</th>
+                                        <th scope="col">REGISTERED VOTER</th>
+                                        <th scope="col">ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody-light">
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div class="modal fade" id="BarangayRecord" tabindex="1" aria-labelledby="BarangayModalLbl"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <h5 class="modal-title" id="BarangayModalLbl">Barangay Record Details
-                                    </h5>
-                                </div>
+                        <a href="" class="btn btn-primary m-2" data-toggle="modal" data-target="#BarangayRecord">
+                            Add Barangay Resident</a>
 
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <form class="m-2" method="post"
-                                                action="{{ url('event/add') }}">
-                                                @csrf
+                        <div class="modal fade" id="BarangayRecord" tabindex="1" aria-labelledby="BarangayModalLbl"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h5 class="modal-title" id="BarangayModalLbl">Barangay Record Details
+                                        </h5>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <form class="m-2" method="post"
+                                                    action="{{ url('event/add') }}">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label for="Title">Last Name</label>
+                                                            <input type="text" class="form-control" name="title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>First Name</label>
+                                                            <input class="form-control" type="text" id="startdate"
+                                                                name="startdate">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>Middle Name</label>
+                                                            <input class="form-control" type="text" id="enddate"
+                                                                name="enddate">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <form class="m-2" action="" method="post">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>Civil Status</label>
+                                                            <select class="form-control" id="civilstatus"
+                                                                name="civilstatus">
+                                                                <option>SINGLE</option>
+                                                                <option>MARRIED</option>
+                                                                <option>DIVORCED</option>
+                                                                <option>SEPARATED</option>
+                                                                <option>WIDOWED</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label for="Title">Resident Status</label>
+                                                            <select class="form-control" id="residentstatus"
+                                                                name="residentstatus">
+                                                                <option>BY BIRTH</option>
+                                                                <option>NATURALIZATION</option>
+                                                                <option>PERMANENT RESIDENT</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label for="Title">Registered Voter</label>
+                                                            <select class="form-control" id="regvoter"
+                                                                name="regvoter">
+                                                                <option>YES</option>
+                                                                <option>NO</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-12">
                                                 <div class="row">
                                                     <div class="form-group col-md-12">
-                                                        <label for="Title">Last Name</label>
-                                                        <input type="text" class="form-control" name="title">
+                                                        <button type="submit" class="btn btn-success">Submit</button>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label>First Name</label>
-                                                        <input class="form-control" type="text" id="startdate"
-                                                            name="startdate">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label>Middle Name</label>
-                                                        <input class="form-control" type="text" id="enddate"
-                                                            name="enddate">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label>Gender</label>
-                                                        <select class="form-control" id="enddate" name="enddate">
-                                                            <option>Male</option>
-                                                            <option>Female</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label>Civil Status</label>
-                                                        <select class="form-control" id="enddate" name="enddate">
-                                                            <option>Single</option>
-                                                            <option>Married</option>
-                                                            <option>Divorced</option>
-                                                            <option>Separated</option>
-                                                            <option>Widowed</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <form class="m-2" action="" method="post">
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="Title">Place of Birth</label>
-                                                        <input type="text" class="form-control" name="title">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="Title">Religion</label>
-                                                        <input type="text" class="form-control" name="title">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="Title">Home Address</label>
-                                                        <input type="text" class="form-control" name="title">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="Title">Resident Status</label>
-                                                        <input type="text" class="form-control" name="title">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="Title">Precinct Number</label>
-                                                        <input type="text" class="form-control" name="title">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="row">
-                                                <div class="form-group col-md-12">
-                                                    <button type="submit" class="btn btn-success">Add
-                                                        Barangay Resident</button>
                                                 </div>
                                             </div>
                                         </div>
