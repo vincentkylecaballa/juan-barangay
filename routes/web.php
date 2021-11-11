@@ -13,6 +13,10 @@
 
 
 Route::get('/', function () {
+    return view('website');
+});
+
+Route::get('/login', function () {
     return view('Login');
 });
 

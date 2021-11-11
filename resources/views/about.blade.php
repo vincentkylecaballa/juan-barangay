@@ -36,14 +36,14 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="align-items-center nav-link active" href="/home"><img
+                                    <a class="align-items-center nav-link" href="{{ url('/home') }}"><img
                                             class="icon ml-3 mr-3 p-2" src="assets/icons8-home.png" alt="">Home</a>
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="/brgyofficers"><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="{{ url('/brgyofficers') }}"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-manager.png" alt="">Barangay Officials</a>
                                 </div>
 
@@ -51,32 +51,23 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="/population"> <img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="{{ url('/population') }}"> <img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-people.png" alt="">Barangay Population</a>
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="/calendar"><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link" href="{{ url('/calendar') }}"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-calendar.png" alt="">Calendar of Activities</a>
                                 </div>
                             </li>
-
-                            <h6 class="nav-title pt-3 pl-3 pt-5">CERTIFICATES</h6>
-
-                            <li class="nav-item">
-                                <div class="col-md-12">
-                                    <a class="nav-link" href="/forms"><img class="icon ml-3 mr-3 p-2"
-                                            src="assets/icons8-document.png" alt="">Barangay Forms</a>
-                                </div>
-                            </li>
-
+                            
                             <h6 class="nav-title pt-3 pl-3 pt-5">INFORMATION HUB</h6>
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link active h-20 " href="/about"><img class="icon ml-3 mr-3 p-2"
+                                    <a class="nav-link active h-20 " href="{{ url('/about') }}"><img class="icon ml-3 mr-3 p-2"
                                             src="assets/icons8-about.png" alt="">About the Team</a>
                                 </div>
                             </li>
