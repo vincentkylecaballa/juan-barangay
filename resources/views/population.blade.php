@@ -109,6 +109,14 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        @if(\Session::has('success'))
+                        <div class ="alert alert-success">
+                             <p>{{ \Session::get('success')}}</p>
+                        </div>
+                         @endif
+
+                        <a href="" class="btn btn-primary m-2" data-toggle="modal" data-target="#BarangayRecord"> Add Barangay Resident</a>
 
                         <div class="container">
                             <div class="row">
@@ -141,17 +149,25 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-
                                     </tbody>
+                                    <tfoot class ="thead-dark">
+                                    <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">FIRST NAME</th>
+                                            <th scope="col">LAST NAME</th>
+                                            <th scope="col">MIDDLE NAME</th>
+                                            <th scope="col">CIVIL STATUS</th>
+                                            <th scope="col">RESIDENT STATUS</th>
+                                            <th scope="col">REGISTERED VOTER</th>
+                                            <th scope="col">ACTION</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
 
 
                         <!-- Add Modal -->
-                        <a href="" class="btn btn-primary m-2" data-toggle="modal" data-target="#BarangayRecord">
-                            Add Barangay Resident</a>
-
                         <div class="modal fade" id="BarangayRecord" tabindex="1" aria-labelledby="BarangayModalLbl"
                             aria-hidden="true">
                             <div class="modal-dialog">
@@ -317,6 +333,7 @@
                                             <div class="row">
                                                 <div class="form-group col-md-12">
                                                     <button type="submit" class="btn btn-success">Update</button>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
                                         </div>
