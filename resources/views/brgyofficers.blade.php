@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Barangay Officials | JuanBarangay</title>
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -16,7 +18,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <title>Barangay Officials | JuanBarangay</title>
+
+    <!-- Data Table -->
+    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -106,7 +111,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-9">
-                            <h1 class="pt-5">Barangay Officials</h1>
+                            <h1 class="pt-5">Current Barangay Officials</h1>
                         </div>
                         <div class="col-md-3">
                             <div class="dropdown pt-5">
@@ -123,12 +128,298 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    @if(\Session::has('success'))
+                    <div class ="alert alert-success">
+                        <p>{{ \Session::get('success')}}</p>
+                    </div>
+                    @endif
+                    
+                    <a href="" class="btn btn-primary m-2" data-toggle="modal" data-target="#BarangayOfficial">Add Barangay Official</a>
+                    
+                    <div class="container">
+                            <div class="row">
+                                <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">FIRST NAME</th>
+                                            <th scope="col">LAST NAME</th>
+                                            <th scope="col">MIDDLE NAME</th>
+                                            <th scope="col">POSTION</th>
+                                            <th scope="col">STATUS</th>
+                                            <th scope="col">ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody-light">
+                                        @foreach($brgy as $brgydata)
+                                            <tr>
+                                                <th>{{$brgydata->id}}</th>
+                                                <td>{{$brgydata->fname}}</td>
+                                                <td>{{$brgydata->lname}}</td>
+                                                <td>{{$brgydata->mname}}</td>
+                                                <td>{{$brgydata->position}}</td>
+                                                <td>{{$brgydata->bstatus}}</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success edit">EDIT</a>
+                                                    <a href="#" class="btn btn-danger delete">DELETE</a>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                    </tbody>
+
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">FIRST NAME</th>
+                                            <th scope="col">LAST NAME</th>
+                                            <th scope="col">MIDDLE NAME</th>
+                                            <th scope="col">POSTION</th>
+                                            <th scope="col">STATUS</th>
+                                            <th scope="col">ACTION</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <!-- Add Modal -->
+                        <div class="modal fade" id="BarangayOfficial" tabindex="1" aria-labelledby="BarangayModalLbl" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h5 class="modal-title" id="BarangayModalLbl">Barangay Record Details
+                                        </h5>
+                                    </div>
+
+                                    <form class="m-2" method="POST"
+                                        action="{{ action('BrgyOfficialController@store') }}">
+                                        @csrf
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label for="Title">Last Name</label>
+                                                            <input type="text" class="form-control" name="lname">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>First Name</label>
+                                                            <input class="form-control" type="text" id="fname"
+                                                                name="fname">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>Middle Name</label>
+                                                            <input class="form-control" type="text" id="mname"
+                                                                name="mname">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-lg-6">
+
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label>Position</label>
+                                                            <select class="form-control" id="position"
+                                                                name="position">
+                                                                <option>BRGY. CAPTAIN</option>
+                                                                <option>CHAIRMAN</option>
+                                                                <option>COUNCILOR</option>
+                                                                <option>TREASURER</option>
+                                                                <option>SECRETARY</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <label for="Title">Status</label>
+                                                            <select class="form-control" id="bstatus"
+                                                                name="bstatus">
+                                                                <option>ACTIVE</option>
+                                                                <option>NOT ACTIVE</option>
+                                                                <option>SUSPENDED</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-12">
+                                                            <button type="submit" class="btn btn-success">Submit</button>
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <!-- Edit Modal -->
+                        <div class="modal fade" id="editModal" tabindex="1" aria-labelledby="BarangayModalLbl" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-center">
+                                                <h5 class="modal-title" id="BarangayModalLbl">Update Barangay Record Details
+                                                </h5>
+                                            </div>
+
+                                            <form class="m-2" method="POST" action="/brgyofficers" id="editForm">
+                                                @csrf
+                                                {{ method_field('PUT') }}
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="Title">Last Name</label>
+                                                                    <input type="text" class="form-control" name="lname" id ="Lname">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label>First Name</label>
+                                                                    <input class="form-control" type="text" name="fname" id ="Fname">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label>Middle Name</label>
+                                                                    <input class="form-control" type="text" name="mname" id="Mname">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-lg-6">
+
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label>Position</label>
+                                                                    <select class="form-control"  name="position" id="Position">
+                                                                        <option>BRGY. CAPTAIN</option>
+                                                                        <option>CHAIRMAN</option>
+                                                                        <option>COUNCILOR</option>
+                                                                        <option>TREASURER</option>
+                                                                        <option>SECRETARY</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="Title">Status</label>
+                                                                    <select class="form-control" name="bstatus" id="Bstatus">
+                                                                        <option>ACTIVE</option>
+                                                                        <option>NOT ACTIVE</option>
+                                                                        <option>SUSPENDED</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="row">
+                                                                <div class="form-group col-md-12">
+                                                                    <button type="submit" class="btn btn-success">Update</button>
+                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- Delete Modal -->
+                        <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="BarangayModalLbl"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h5 class="modal-title" id="BarangayModalLbl">Delete Barangay Record Details
+                                        </h5>
+                                    </div>
+
+                                    <form class="m-2" method="POST" action="/brgyofficers" id="deleteForm">
+                                        @csrf
+                                        {{ method_field('DELETE') }}
+
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <p>Are you sure you want to delete data?</p>            
+
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="row">
+                                                    <div class="form-group col-md-12">
+                                                        <button type="submit" class="btn btn-success">Delete</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
         </div>
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#dataTable').DataTable();
+
+            table.on('click', '.edit', function() {
+                $tr = $(this).closest('tr');
+                if ($($tr).hasClass('child')) {
+                    $tr = $tr.prev(' .parent');
+                }
+
+                var data = table.row($tr).data();
+                console.log(data);
+
+                $('#Fname').val(data[1]);
+                $('#Lname').val(data[2]);
+                $('#Mname').val(data[3]);
+                $('#Position').val(data[4]);
+                $('#Bstatus').val(data[5]);
+
+                $('#editForm').attr('action', '/brgyofficers/' + data[0]);
+                $('#editModal').modal('show')
+            });
+            //////
+
+            table.on('click', '.delete', function() {
+                $tr = $(this).closest('tr');
+                if ($($tr).hasClass('child')) {
+                    $tr = $tr.prev(' .parent');
+                }
+
+                var data = table.row($tr).data();
+                console.log(data);
+
+                //$('#id').val(data[0]);
+
+                $('#deleteForm').attr('action', '/brgyofficers/' + data[0]);
+                $('#deleteModal').modal('show')
+            });
+        });
+    </script>
 </body>
 
 </html>
