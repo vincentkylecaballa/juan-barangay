@@ -52,23 +52,10 @@ li:hover svg path {
 
 /** title page **/
 
-.population-title {
+.officials-title {
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
 }
-
-
-/** button **/
-
-.add-event {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    color: white;
-    background-color: #3D5AF1;
-}
-
-
-/** modal **/
 
 label {
     font-family: 'Rubik', sans-serif;
@@ -80,4 +67,12 @@ label {
 .modal-title {
     font-family: 'Rubik', sans-serif;
     font: bolder;
+}
+
+table {
+    width: 100% !important;
+}
+
+.table-responsive {
+    display: table;
 }

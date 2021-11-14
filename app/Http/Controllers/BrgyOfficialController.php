@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Population;
+use App\BrgyOfficial;
 
-
-class PopulationController extends Controller
+class BrgyOfficialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class PopulationController extends Controller
      */
     public function index()
     {
-        $pop = Population::all();
-        return view('population')->with('pop',$pop);
+        $brgy = BrgyOfficial::all();
+        return view('brgyofficers')->with('brgy',$brgy);
     }
 
     /**
@@ -43,18 +42,17 @@ class PopulationController extends Controller
             'mname' => 'required',
         ]);
 
-        $pop = new Population;
+        $brgy = new BrgyOfficial;
 
-        $pop->fname =$request->input('fname');
-        $pop->lname =$request->input('lname');
-        $pop->mname =$request->input('mname');
-        $pop->cstatus =$request->input('cstatus');
-        $pop->rstatus =$request->input('rstatus');
-        $pop->isvoter =$request->input('isvoter');  
+        $brgy->fname =$request->input('fname');
+        $brgy->lname =$request->input('lname');
+        $brgy->mname =$request->input('mname');
+        $brgy->position =$request->input('position');
+        $brgy->bstatus =$request->input('bstatus');
 
-        $pop->save();
+        $brgy->save();
 
-        return redirect('/population')->with('success','Data Saved');
+        return redirect('/brgyofficers')->with('success','Data Saved');
     }
 
     /**
@@ -94,18 +92,17 @@ class PopulationController extends Controller
             'mname' => 'required',
         ]);
 
-        $pop = Population::find($id);
+        $brgy = BrgyOfficial::find($id);
 
-        $pop->fname =$request->input('fname');
-        $pop->lname =$request->input('lname');
-        $pop->mname =$request->input('mname');
-        $pop->cstatus =$request->input('cstatus');
-        $pop->rstatus =$request->input('rstatus');
-        $pop->isvoter =$request->input('isvoter');  
+        $brgy->fname =$request->input('fname');
+        $brgy->lname =$request->input('lname');
+        $brgy->mname =$request->input('mname');
+        $brgy->position =$request->input('position');
+        $brgy->bstatus =$request->input('bstatus');
 
-        $pop->save();
+        $brgy->save();
 
-        return redirect('/population')->with('success','Data Updated');;
+        return redirect('/brgyofficers')->with('success','Data Updated');
     }
 
     /**
@@ -116,9 +113,9 @@ class PopulationController extends Controller
      */
     public function destroy($id)
     {
-        $pop = Population::find($id);
-        $pop->delete();
+        $brgy = BrgyOfficial::find($id);
+        $brgy->delete();
 
-        return redirect('/population')->with('success','Data Deleted');;
+        return redirect('/brgyofficers')->with('success','Data Deleted');;
     }
 }

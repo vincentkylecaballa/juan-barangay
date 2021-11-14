@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-.nav-sidebar { 
+.nav-sidebar {
     position: fixed;
 }
 
@@ -37,4 +37,14 @@ li:hover {
     border-radius: 10px 10px 10px 10px;
     background-color: white;
     color: #3D5AF1;
+}
+
+li:hover svg path {
+    fill: #3D5AF1;
+}
+
+.svg-icon {
+    fill: #E2F3F5;
+    height: 3rem;
+    width: 3rem;
 }
