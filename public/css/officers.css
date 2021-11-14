@@ -39,17 +39,6 @@ li:hover {
     color: #3D5AF1;
 }
 
-li:active {
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background-color: white;
-    color: #3D5AF1;
-}
-
 li:hover svg path {
     fill: #3D5AF1;
 }
@@ -63,7 +52,7 @@ li:hover svg path {
 
 /** title page **/
 
-.population-title {
+.officials-title {
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
 }
@@ -78,4 +67,12 @@ label {
 .modal-title {
     font-family: 'Rubik', sans-serif;
     font: bolder;
+}
+
+table {
+    width: 100% !important;
+}
+
+.table-responsive {
+    display: table;
 }

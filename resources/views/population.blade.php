@@ -9,7 +9,6 @@
     <link href="{{ asset('css/population.css') }}" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
 
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -22,7 +21,6 @@
 
     <!-- Data Table -->
     <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 
 </head>
 
@@ -67,14 +65,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <div class="col-md-12">
+                                <div class="col-md-12 active">
                                     <a class="nav-link" href="{{ url('/population') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
                                             y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
                                                 d="M 9 4 C 6.239 4 4 6.239 4 9 L 4 10 C 4 12.761 6.239 15 9 15 C 11.761 15 14 12.761 14 10 L 14 9 C 14 6.239 11.761 4 9 4 z M 21 4 C 18.239 4 16 6.239 16 9 L 16 10 C 16 12.761 18.239 15 21 15 C 23.761 15 26 12.761 26 10 L 26 9 C 26 6.239 23.761 4 21 4 z M 21 6 C 22.654 6 24 7.346 24 9 L 24 10 C 24 11.654 22.654 13 21 13 C 19.346 13 18 11.654 18 10 L 18 9 C 18 7.346 19.346 6 21 6 z M 8.9980469 17 C 5.7200469 17 1.5146875 18.874062 0.3046875 20.914062 C -0.4423125 22.174062 0.26909375 24 1.4960938 24 L 13.496094 24 L 16.503906 24 L 28.503906 24 C 29.730906 24 30.443313 22.174063 29.695312 20.914062 C 28.484313 18.874062 24.276047 17 20.998047 17 C 19.047658 17 16.780902 17.671584 15 18.638672 C 13.21859 17.67114 10.948987 17 8.9980469 17 z M 20.998047 19 C 23.768047 19 27.207609 20.640594 27.974609 21.933594 C 27.985609 21.951594 27.990141 21.975 27.994141 22 L 17.992188 22 C 17.982946 21.627707 17.893464 21.251138 17.693359 20.914062 C 17.496485 20.582142 17.198019 20.259134 16.859375 19.943359 C 18.140889 19.393039 19.646958 19 20.998047 19 z">
                                             </path>
-                                        </svg>Barangay Population</a>
+                                        </svg>Barangay Population
+                                    </a>
                                 </div>
                             </li>
 
@@ -95,8 +94,8 @@
                             <li class="nav-item">
                                 <div class="col-md-12">
                                     <a class="nav-link h-20" href="{{ url('/about') }}">
-                                        <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                            viewBox="0 0 30 30" style=" fill:white;">
+                                        <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
+                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
                                                 d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,21h-2v-7h2V21z M15,11.5 c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5s1.5,0.672,1.5,1.5S15.828,11.5,15,11.5z">
                                             </path>
@@ -130,14 +129,12 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        @if(\Session::has('success'))
-                        <div class ="alert alert-success">
-                             <p>{{ \Session::get('success')}}</p>
-                        </div>
-                         @endif
 
-                        <a href="" class="btn btn-primary m-2" data-toggle="modal" data-target="#BarangayRecord"> Add Barangay Resident</a>
+                        @if (\Session::has('success'))
+                            <div class="alert alert-success">
+                                <p>{{ \Session::get('success') }}</p>
+                            </div>
+                        @endif
 
                         <div class="container">
                             <div class="row">
@@ -171,23 +168,12 @@
                                             </tr>
                                         @endforeach
                                     </tbody>
-                                    <tfoot class ="thead-dark">
-                                    <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">FIRST NAME</th>
-                                            <th scope="col">LAST NAME</th>
-                                            <th scope="col">MIDDLE NAME</th>
-                                            <th scope="col">CIVIL STATUS</th>
-                                            <th scope="col">RESIDENT STATUS</th>
-                                            <th scope="col">REGISTERED VOTER</th>
-                                            <th scope="col">ACTION</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                         </div>
 
-
+                        <a href="" class="btn btn-primary mt-3" data-toggle="modal" data-target="#BarangayRecord"> Add
+                            Barangay Resident</a>
                         <!-- Add Modal -->
                         <div class="modal fade" id="BarangayRecord" tabindex="1" aria-labelledby="BarangayModalLbl"
                             aria-hidden="true">
@@ -354,7 +340,8 @@
                                             <div class="row">
                                                 <div class="form-group col-md-12">
                                                     <button type="submit" class="btn btn-success">Update</button>
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
                                         </div>

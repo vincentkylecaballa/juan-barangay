@@ -59,7 +59,7 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item {{ $request->is('/population') ? 'active' : '' }}">
                                 <div class="col-md-12">
                                     <a class="nav-link" href="{{ url('/population') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
