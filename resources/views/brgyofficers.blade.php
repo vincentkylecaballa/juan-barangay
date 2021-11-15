@@ -78,7 +78,7 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/calendar') }}">
+                                    <a class="nav-link" href="{{ url('/eventcalendar') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
                                             y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
@@ -111,7 +111,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-9">
-                            <h1 class="pt-5 officials-title">Current Barangay Officials</h1>
+                            <h1 class="pt-5 officials-title">Calendar of Activities</h1>
                         </div>
                         <div class="col-md-3">
                             <div class="dropdown pt-5">
@@ -134,7 +134,7 @@
                         </div>
                     @endif
 
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
                             <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
                                 <thead class="thead-dark">

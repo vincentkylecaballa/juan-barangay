@@ -41,8 +41,8 @@ Route::get('/forms', function () {
     return view('forms');
 });
 
-Route::get('/calendar', function () {
-    return view('calendar');
+Route::get('/eventcalendar', function () {
+    return view('eventcalendar');
 });
 
 

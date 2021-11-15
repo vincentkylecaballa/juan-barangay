@@ -79,7 +79,7 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/calendar') }}">
+                                    <a class="nav-link" href="{{ url('/eventcalendar') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
                                             y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
