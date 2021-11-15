@@ -45,8 +45,18 @@ Route::get('/calendar', function () {
     return view('calendar');
 });
 
+
+
 Route::resource('/population','PopulationController');
 Route::resource('/brgyofficers','BrgyOfficialController');
+Route::resource('/eventcalendar','CalendarEventController');
+
+Route::get('displaydata','CalendarEventController@show');
+Route::get('/addeventurl','CalendarEventController@display');
+Route::get('deleteevent','CalendarEventController@show');
+
+
+
 
 Route::get('event/add','EventController@createEvent');
 Route::post('event/add','EventController@store');
