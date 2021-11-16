@@ -174,7 +174,6 @@
                                                     <td>{{ $event->start_date }}</td>
                                                     <td>{{ $event->end_date }}</td>
                                                     <td>
-
                                                         <div class="row">
                                                             <!-- <a href="{{ action('CalendarEventController@edit', $event['id']) }}" class="btn btn-success">EDIT</a>  -->
 

@@ -193,6 +193,7 @@
 
                         <a href="" class="btn btn-primary mt-3" data-toggle="modal" data-target="#BarangayRecord"> Add
                             Barangay Resident</a>
+                            
                         <!-- Add Modal -->
                         <div class="modal fade" id="BarangayRecord" tabindex="1" aria-labelledby="BarangayModalLbl"
                             aria-hidden="true">

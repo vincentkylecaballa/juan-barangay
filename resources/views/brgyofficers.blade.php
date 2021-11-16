@@ -176,6 +176,9 @@
                         </table>
                     </div>
 
+                    <a href="" class="btn btn-primary mt-3" data-toggle="modal" data-target="#BarangayOfficial"> Add
+                            Barangay Official</a>
+
                     <!-- Add Modal -->
                     <div class="modal fade" id="BarangayOfficial" tabindex="1" aria-labelledby="BarangayModalLbl"
                         aria-hidden="true">

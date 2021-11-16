@@ -50,6 +50,7 @@ Route::get('/eventcalendar', function () {
 Route::resource('/population','PopulationController');
 Route::resource('/brgyofficers','BrgyOfficialController');
 Route::resource('/eventcalendar','CalendarEventController');
+Route::resource('/home','HomeController');
 
 Route::get('displaydata','CalendarEventController@show');
 Route::get('/addeventurl','CalendarEventController@display');
