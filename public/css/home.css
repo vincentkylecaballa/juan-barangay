@@ -4,6 +4,14 @@
     height: 100vh;
 }
 
+.button-account {
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: #3D5AF1;
+    font-size: 1.45rem;
+}
+
 
 /** title page **/
 
@@ -55,4 +63,25 @@ li:hover svg path {
     fill: #E2F3F5;
     height: 3rem;
     width: 3rem;
+}
+
+
+/** Card **/
+
+.population-card {
+    background-color: #ffec00 !important;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.voters-card {
+    background-color: green !important;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.title-text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
 }
