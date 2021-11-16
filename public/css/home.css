@@ -4,6 +4,14 @@
     height: 100vh;
 }
 
+
+/** title page **/
+
+.home-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
 .nav-sidebar {
     position: fixed;
 }

@@ -71,11 +71,18 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item" style="-moz-border-radius-topleft: 10px;
+                            -moz-border-radius-topright: 10px;
+                            -moz-border-radius-bottomright: 10px;
+                            -moz-border-radius-bottomleft: 10px;
+                            -webkit-border-radius: 10px 10px 10px 10px;
+                            border-radius: 10px 10px 10px 10px;
+                            background-color: white;">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/eventcalendar') }}">
+                                    <a class="nav-link" href="{{ url('/eventcalendar') }}" style="
+                                    color: #3D5AF1;">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
+                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill: #3D5AF1;">
                                             <path
                                                 d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M7,23 c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C8,22.552,7.552,23,7,23z M7,19c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1 s1,0.448,1,1C8,18.552,7.552,19,7,19z M11,23c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C12,22.552,11.552,23,11,23z M11,19c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C12,18.552,11.552,19,11,19z M11,15c-0.552,0-1-0.448-1-1 c0-0.552,0.448-1,1-1s1,0.448,1,1C12,14.552,11.552,15,11,15z M15,23c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1 C16,22.552,15.552,23,15,23z M15,19c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C16,18.552,15.552,19,15,19z M15,15 c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C16,14.552,15.552,15,15,15z M19,23c-0.552,0-1-0.448-1-1 c0-0.552,0.448-1,1-1s1,0.448,1,1C20,22.552,19.552,23,19,23z M19,19c-0.552,0-1-0.448-1-1s0.448-1,1-1s1,0.448,1,1S19.552,19,19,19 z M18,14c0-0.552,0.448-1,1-1s1,0.448,1,1c0,0.552-0.448,1-1,1S18,14.552,18,14z M23,19c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1 s1,0.448,1,1C24,18.552,23.552,19,23,19z M23,15c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1C24,14.552,23.552,15,23,15z M24,10H6V6h18V10z">
                                             </path>
@@ -109,7 +116,7 @@
                                 <h1 class="pt-5 calendar-title">Calendar of Activities</h1>
                             </div>
                             <div class="col-md-3">
-                                <div class="dropdown pt-5">
+                                <div class="dropdown p-5 mr-auto ml-auto">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
                                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">

@@ -34,15 +34,23 @@
 
                             <h6 class="nav-title pl-3 pt-3">DASHBOARD</h6>
 
-                            <li class="nav-item active">
+                            <li class="nav-item" style="-moz-border-radius-topleft: 10px;
+                            -moz-border-radius-topright: 10px;
+                            -moz-border-radius-bottomright: 10px;
+                            -moz-border-radius-bottomleft: 10px;
+                            -webkit-border-radius: 10px 10px 10px 10px;
+                            border-radius: 10px 10px 10px 10px;
+                            background-color: white;">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/home') }}">
+                                    <a class="nav-link active" href="{{ url('/home') }}" style="
+                                    color: #3D5AF1;">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
+                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill: #3D5AF1;">
                                             <path
                                                 d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z">
                                             </path>
-                                        </svg>Home</a>
+                                        </svg>Home
+                                    </a>
                                 </div>
                             </li>
 
@@ -59,7 +67,7 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item {{ $request->is('/population') ? 'active' : '' }}">
+                            <li class="nav-item">
                                 <div class="col-md-12">
                                     <a class="nav-link" href="{{ url('/population') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
@@ -74,7 +82,7 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/calendar') }}">
+                                    <a class="nav-link" href="{{ url('/eventcalendar') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
                                             y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
@@ -97,38 +105,49 @@
                                         </svg>About the Team</a>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-9">
                 <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h1 class="pt-5">Home</h1>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="dropdown pt-5">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h1 class="pt-5 home-title">Home</h1>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dropdown p-5 mr-auto ml-auto">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+
+                        </div>
                     </div>
 
-                    <div class="row">
-
-                    </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            $(document).ready(function() {
+                $(document).on('click', '.nav-item a', function(e) {
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                });
+            })
+        </script>
 </body>
 
 </html>

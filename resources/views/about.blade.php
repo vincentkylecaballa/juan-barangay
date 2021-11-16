@@ -73,7 +73,7 @@
 
                             <li class="nav-item">
                                 <div class="col-md-12">
-                                    <a class="nav-link" href="{{ url('/calendar') }}">
+                                    <a class="nav-link" href="{{ url('/eventcalendar') }}">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
                                             y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
                                             <path
@@ -85,11 +85,18 @@
 
                             <h6 class="nav-title pt-3 pl-3 pt-5">INFORMATION HUB</h6>
 
-                            <li class="nav-item">
+                            <li class="nav-item" style="-moz-border-radius-topleft: 10px;
+                            -moz-border-radius-topright: 10px;
+                            -moz-border-radius-bottomright: 10px;
+                            -moz-border-radius-bottomleft: 10px;
+                            -webkit-border-radius: 10px 10px 10px 10px;
+                            border-radius: 10px 10px 10px 10px;
+                            background-color: white;">
                                 <div class="col-md-12">
-                                    <a class="nav-link h-20" href="{{ url('/about') }}">
+                                    <a class="nav-link h-20" href="{{ url('/about') }}" style="
+                                    color: #3D5AF1;">
                                         <svg class="svg-icon ml-3 mr-3 p-2" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:white;">
+                                            y="0px" width="30" height="30" viewBox="0 0 30 30" style=" fill:#3D5AF1;">
                                             <path
                                                 d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,21h-2v-7h2V21z M15,11.5 c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5s1.5,0.672,1.5,1.5S15.828,11.5,15,11.5z">
                                             </path>
@@ -108,7 +115,7 @@
                             <div class="col-md-9">
                             </div>
                             <div class="col-md-3">
-                                <div class="dropdown pt-5">
+                                <div class="dropdown p-5 ml-auto mr-auto">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
                                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
@@ -212,11 +219,6 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <div class="row">
-
                     </div>
                 </div>
             </div>
