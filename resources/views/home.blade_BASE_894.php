@@ -17,12 +17,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <title>Home | JuanBarangay</title>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css" />
 </head>
 
 <body>
@@ -125,18 +119,20 @@
                                 <h1 class="pt-5 home-title">Home</h1>
                             </div>
                             <div class="col-md-3">
-                                <div class="dropdown pt-5">
-                                    <button class="btn btn-primary dropdown-toggle w-75" type="button"
-                                        data-toggle="dropdown">My Account
-                                    <ul class="dropdown-menu w-100">
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                                        </li>
-                                    </ul>
+                                <div class="dropdown p-5 mr-auto ml-auto">
+                                    <button class="button-account pl-5 pr-5 pt-3 pb-3" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <h6>Account</h6>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row pt-3">
+                        <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
@@ -146,9 +142,8 @@
                                                     <h4 class="title-text ml-4 mt-5">Total Population</h4>
                                                 </div>
                                                 <div class="col-lg-4 col-md-4">
-                                                    <svg class="m-5" xmlns="http://www.w3.org/2000/svg"
-                                                        x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"
-                                                        style=" fill: white;">
+                                                    <svg class="m-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                                        height="50" viewBox="0 0 50 50" style=" fill: white;">
                                                         <path
                                                             d="M 16 3 A 3 3 0 0 0 13 6 A 3 3 0 0 0 16 9 A 3 3 0 0 0 19 6 A 3 3 0 0 0 16 3 z M 34 3 A 3 3 0 0 0 31 6 A 3 3 0 0 0 34 9 A 3 3 0 0 0 37 6 A 3 3 0 0 0 34 3 z M 12.669922 11 C 10.639922 11 9 12.609844 9 14.589844 L 9 24.5 C 9 25.33 9.67 26 10.5 26 C 11.33 26 12 25.33 12 24.5 L 12 16.5 C 12 16.22 12.22 16 12.5 16 C 12.78 16 13 16.22 13 16.5 L 13 34 C 13 34.552 13.448 35 14 35 L 18 35 C 18.552 35 19 34.552 19 34 L 19 16.5 C 19 16.22 19.22 16 19.5 16 C 19.78 16 20 16.22 20 16.5 L 20 24.5 C 20 25.33 20.67 26 21.5 26 C 22.33 26 23 25.33 23 24.5 L 23 23.5 L 23 14.589844 C 23 12.609844 21.360078 11 19.330078 11 L 12.669922 11 z M 31.339844 11 C 28.929844 11 28.040078 12.999141 27.830078 13.619141 C 27.830078 13.619141 25.070937 21.189766 24.460938 23.009766 C 24.190938 23.789766 24.600859 24.649922 25.380859 24.919922 C 26.140859 25.179922 26.96 24.800313 27.25 24.070312 L 27.259766 24.070312 C 27.259766 24.090312 27.25 24.110625 27.25 24.140625 L 30.029297 16.339844 C 30.129297 16.079844 30.409922 15.949063 30.669922 16.039062 C 30.929922 16.129062 31.070703 16.419687 30.970703 16.679688 L 27.730469 25.660156 C 27.500469 26.310156 27.979922 27 28.669922 27 L 39.330078 27 C 40.020078 27 40.499531 26.310156 40.269531 25.660156 L 37.050781 16.679688 C 36.960781 16.419688 37.089609 16.129062 37.349609 16.039062 C 37.609609 15.949063 37.900234 16.079844 37.990234 16.339844 L 40.699219 23.970703 C 40.959219 24.750703 41.809844 25.179688 42.589844 24.929688 C 43.379844 24.669688 43.810781 23.819297 43.550781 23.029297 C 42.950781 21.219297 40.179688 13.629141 40.179688 13.619141 C 39.969688 12.999141 39.099219 11 36.699219 11 L 31.339844 11 z M 30.25 28 L 31.009766 34.119141 C 31.069766 34.619141 31.5 35 32 35 L 36 35 C 36.5 35 36.930234 34.619141 36.990234 34.119141 L 37.759766 28 L 30.25 28 z M 10 31.099609 C 5.69 34.399609 2.4592969 39.129219 1.0292969 44.699219 C 0.88929687 45.239219 1.22 45.779922 1.75 45.919922 C 2.29 46.059922 2.8307031 45.729219 2.9707031 45.199219 C 4.1507031 40.609219 6.6497656 36.649453 10.009766 33.689453 C 9.9997656 33.629453 10 31.099609 10 31.099609 z M 40 31.109375 C 40 31.109375 40.000234 33.629219 39.990234 33.699219 C 43.350234 36.659219 45.859297 40.64 47.029297 45.25 C 47.149297 45.7 47.55 46 48 46 C 48.08 46 48.16 45.990703 48.25 45.970703 C 48.78 45.840703 49.110703 45.289766 48.970703 44.759766 C 47.550703 39.159766 44.31 34.419375 40 31.109375 z M 8.4648438 36.140625 A 1 1 0 0 0 7.4648438 37.140625 A 1 1 0 0 0 8.4648438 38.140625 A 1 1 0 0 0 9.4648438 37.140625 A 1 1 0 0 0 8.4648438 36.140625 z M 41.535156 36.140625 A 1 1 0 0 0 40.535156 37.140625 A 1 1 0 0 0 41.535156 38.140625 A 1 1 0 0 0 42.535156 37.140625 A 1 1 0 0 0 41.535156 36.140625 z M 11.095703 37.363281 A 1 1 0 0 0 10.095703 38.363281 A 1 1 0 0 0 11.095703 39.363281 A 1 1 0 0 0 12.095703 38.363281 A 1 1 0 0 0 11.095703 37.363281 z M 38.904297 37.363281 A 1 1 0 0 0 37.904297 38.363281 A 1 1 0 0 0 38.904297 39.363281 A 1 1 0 0 0 39.904297 38.363281 A 1 1 0 0 0 38.904297 37.363281 z M 13.919922 38.373047 A 1 1 0 0 0 12.919922 39.373047 A 1 1 0 0 0 13.919922 40.373047 A 1 1 0 0 0 14.919922 39.373047 A 1 1 0 0 0 13.919922 38.373047 z M 36.080078 38.373047 A 1 1 0 0 0 35.080078 39.373047 A 1 1 0 0 0 36.080078 40.373047 A 1 1 0 0 0 37.080078 39.373047 A 1 1 0 0 0 36.080078 38.373047 z M 16.912109 39.152344 A 1 1 0 0 0 15.912109 40.152344 A 1 1 0 0 0 16.912109 41.152344 A 1 1 0 0 0 17.912109 40.152344 A 1 1 0 0 0 16.912109 39.152344 z M 33.087891 39.152344 A 1 1 0 0 0 32.087891 40.152344 A 1 1 0 0 0 33.087891 41.152344 A 1 1 0 0 0 34.087891 40.152344 A 1 1 0 0 0 33.087891 39.152344 z M 20.056641 39.689453 A 1 1 0 0 0 19.056641 40.689453 A 1 1 0 0 0 20.056641 41.689453 A 1 1 0 0 0 21.056641 40.689453 A 1 1 0 0 0 20.056641 39.689453 z M 29.943359 39.689453 A 1 1 0 0 0 28.943359 40.689453 A 1 1 0 0 0 29.943359 41.689453 A 1 1 0 0 0 30.943359 40.689453 A 1 1 0 0 0 29.943359 39.689453 z M 23.324219 39.964844 A 1 1 0 0 0 22.324219 40.964844 A 1 1 0 0 0 23.324219 41.964844 A 1 1 0 0 0 24.324219 40.964844 A 1 1 0 0 0 23.324219 39.964844 z M 26.675781 39.964844 A 1 1 0 0 0 25.675781 40.964844 A 1 1 0 0 0 26.675781 41.964844 A 1 1 0 0 0 27.675781 40.964844 A 1 1 0 0 0 26.675781 39.964844 z M 37.048828 41.041016 C 36.919453 41.037734 36.787656 41.059375 36.660156 41.109375 C 36.150156 41.319375 35.889609 41.900156 36.099609 42.410156 C 36.249609 42.810156 36.629297 43.039062 37.029297 43.039062 C 37.149297 43.039062 37.280391 43.020703 37.400391 42.970703 C 37.910391 42.770703 38.160938 42.189922 37.960938 41.669922 C 37.803438 41.287422 37.436953 41.050859 37.048828 41.041016 z M 12.90625 41.152344 C 12.514375 41.162656 12.15 41.399062 12 41.789062 L 12 41.779297 C 11.8 42.299297 12.050547 42.880078 12.560547 43.080078 C 12.680547 43.130078 12.809687 43.150391 12.929688 43.150391 C 13.329687 43.150391 13.709375 42.909531 13.859375 42.519531 C 14.059375 41.999531 13.810781 41.420703 13.300781 41.220703 C 13.170781 41.170703 13.036875 41.148906 12.90625 41.152344 z M 38.115234 43.898438 C 37.986953 43.879687 37.853203 43.884922 37.720703 43.919922 C 37.180703 44.059922 36.86 44.610625 37 45.140625 C 37.12 45.590625 37.530703 45.890625 37.970703 45.890625 C 38.060703 45.890625 38.140469 45.879375 38.230469 45.859375 C 38.760469 45.709375 39.079453 45.170625 38.939453 44.640625 C 38.834453 44.235625 38.500078 43.954688 38.115234 43.898438 z M 11.851562 44.007812 C 11.465312 44.064062 11.134297 44.345 11.029297 44.75 C 10.889297 45.28 11.22 45.830703 11.75 45.970703 C 11.83 45.990703 11.92 46 12 46 C 12.45 46 12.850703 45.7 12.970703 45.25 C 13.100703 44.71 12.78 44.169297 12.25 44.029297 C 12.115 43.994297 11.980313 43.989063 11.851562 44.007812 z">
                                                         </path>
@@ -157,7 +152,7 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count1}}</h1>
+                                                    <h1 class="p-3 number-text">3</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +175,7 @@
                                             </div>
                                             <div class="col-lg-8 col-md-8">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count}}</h1>
+                                                    <h1 class="p-3 number-text">3</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,32 +191,9 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="container-fluid">
+
                                     <!-- ADD TABLE HERE -->
-                                        <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                   
-                                                    <th scope="col">FIRST NAME</th>
-                                                    <th scope="col">LAST NAME</th>
-                                                    <th scope="col">MIDDLE NAME</th>
-                                                    <th scope="col">BARANGAY POSITION</th>
-                                                    <th scope="col">RESIDENT STATUS</th>
-                                            
-                                                    </tr>
-                                            </thead>
-                                            <tbody class="tbody-light">
-                                                @foreach ($brgy as $brgydata)
-                                                    <tr>
-                                                        <td>{{ $brgydata->fname }}</td>
-                                                        <td>{{ $brgydata->lname }}</td>
-                                                        <td>{{ $brgydata->mname }}</td>
-                                                        <td>{{ $brgydata->position }}</td>
-                                                        <td>{{ $brgydata->bstatus }}</td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -231,31 +203,6 @@
 
                                     <!-- ADD TABLE HERE -->
 
-                                    <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th scope="col">FIRST NAME</th>
-                                                <th scope="col">LAST NAME</th>
-                                                <th scope="col">MIDDLE NAME</th>
-                                                <th scope="col">CIVIL STATUS</th>
-                                                <th scope="col">RESIDENT STATUS</th>
-                                                <th scope="col">REGISTERED VOTER</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody class="tbody-light">
-                                            @foreach ($pop as $popdata)
-                                                <tr>
-                                                    <td>{{ $popdata->fname }}</td>
-                                                    <td>{{ $popdata->lname }}</td>
-                                                    <td>{{ $popdata->mname }}</td>
-                                                    <td>{{ $popdata->cstatus }}</td>
-                                                    <td>{{ $popdata->rstatus }}</td>
-                                                    <td>{{ $popdata->isvoter }}</td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -264,21 +211,49 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            var table = $('#dataTable').DataTable();
 
-            $('#dataTable1').DataTable();
+            table.on('click', '.edit', function() {
+                $tr = $(this).closest('tr');
+                if ($($tr).hasClass('child')) {
+                    $tr = $tr.prev(' .parent');
+                }
 
-    
+                var data = table.row($tr).data();
+                console.log(data);
+
+                $('#Fname').val(data[1]);
+                $('#Lname').val(data[2]);
+                $('#Mname').val(data[3]);
+                $('#Position').val(data[4]);
+                $('#Bstatus').val(data[5]);
+
+                $('#editForm').attr('action', '/brgyofficers/' + data[0]);
+                $('#editModal').modal('show')
+            });
+            //////
+
+            table.on('click', '.delete', function() {
+                $tr = $(this).closest('tr');
+                if ($($tr).hasClass('child')) {
+                    $tr = $tr.prev(' .parent');
+                }
+
+                var data = table.row($tr).data();
+                console.log(data);
+
+                //$('#id').val(data[0]);
+
+                $('#deleteForm').attr('action', '/brgyofficers/' + data[0]);
+                $('#deleteModal').modal('show')
+            });
         });
     </script>
-=======
->>>>>>> 2b8e38942f8dcce7492ec5d209f17ee0510354b6
 </body>
 
 </html>

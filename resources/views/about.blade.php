@@ -115,17 +115,13 @@
                             <div class="col-md-9">
                             </div>
                             <div class="col-md-3">
-                                <div class="dropdown p-5 ml-auto mr-auto">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Dropdown button
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                <div class="dropdown pt-5">
+                                    <button class="btn btn-primary dropdown-toggle w-75" type="button"
+                                        data-toggle="dropdown">My Account
+                                    <ul class="dropdown-menu w-100">
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

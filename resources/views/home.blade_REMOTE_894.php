@@ -17,12 +17,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <title>Home | JuanBarangay</title>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css" />
 </head>
 
 <body>
@@ -157,7 +151,7 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count1}}</h1>
+                                                    <h1 class="p-3 number-text">3</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +174,7 @@
                                             </div>
                                             <div class="col-lg-8 col-md-8">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count}}</h1>
+                                                    <h1 class="p-3 number-text">3</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,32 +190,9 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="container-fluid">
+
                                     <!-- ADD TABLE HERE -->
-                                        <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                   
-                                                    <th scope="col">FIRST NAME</th>
-                                                    <th scope="col">LAST NAME</th>
-                                                    <th scope="col">MIDDLE NAME</th>
-                                                    <th scope="col">BARANGAY POSITION</th>
-                                                    <th scope="col">RESIDENT STATUS</th>
-                                            
-                                                    </tr>
-                                            </thead>
-                                            <tbody class="tbody-light">
-                                                @foreach ($brgy as $brgydata)
-                                                    <tr>
-                                                        <td>{{ $brgydata->fname }}</td>
-                                                        <td>{{ $brgydata->lname }}</td>
-                                                        <td>{{ $brgydata->mname }}</td>
-                                                        <td>{{ $brgydata->position }}</td>
-                                                        <td>{{ $brgydata->bstatus }}</td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -231,31 +202,6 @@
 
                                     <!-- ADD TABLE HERE -->
 
-                                    <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th scope="col">FIRST NAME</th>
-                                                <th scope="col">LAST NAME</th>
-                                                <th scope="col">MIDDLE NAME</th>
-                                                <th scope="col">CIVIL STATUS</th>
-                                                <th scope="col">RESIDENT STATUS</th>
-                                                <th scope="col">REGISTERED VOTER</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody class="tbody-light">
-                                            @foreach ($pop as $popdata)
-                                                <tr>
-                                                    <td>{{ $popdata->fname }}</td>
-                                                    <td>{{ $popdata->lname }}</td>
-                                                    <td>{{ $popdata->mname }}</td>
-                                                    <td>{{ $popdata->cstatus }}</td>
-                                                    <td>{{ $popdata->rstatus }}</td>
-                                                    <td>{{ $popdata->isvoter }}</td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -264,21 +210,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#dataTable').DataTable();
-
-            $('#dataTable1').DataTable();
-
-    
-        });
-    </script>
-=======
->>>>>>> 2b8e38942f8dcce7492ec5d209f17ee0510354b6
 </body>
 
 </html>
