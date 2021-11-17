@@ -210,49 +210,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var table = $('#dataTable').DataTable();
-
-            table.on('click', '.edit', function() {
-                $tr = $(this).closest('tr');
-                if ($($tr).hasClass('child')) {
-                    $tr = $tr.prev(' .parent');
-                }
-
-                var data = table.row($tr).data();
-                console.log(data);
-
-                $('#Fname').val(data[1]);
-                $('#Lname').val(data[2]);
-                $('#Mname').val(data[3]);
-                $('#Position').val(data[4]);
-                $('#Bstatus').val(data[5]);
-
-                $('#editForm').attr('action', '/brgyofficers/' + data[0]);
-                $('#editModal').modal('show')
-            });
-            //////
-
-            table.on('click', '.delete', function() {
-                $tr = $(this).closest('tr');
-                if ($($tr).hasClass('child')) {
-                    $tr = $tr.prev(' .parent');
-                }
-
-                var data = table.row($tr).data();
-                console.log(data);
-
-                //$('#id').val(data[0]);
-
-                $('#deleteForm').attr('action', '/brgyofficers/' + data[0]);
-                $('#deleteModal').modal('show')
-            });
-        });
-    </script>
 </body>
 
 </html>
