@@ -23,26 +23,29 @@
                             <p class="m-3">to check the information of your barangay</p>
                         </div>
                         <div class="col-lg-12 pl-5 pr-5">
+                            <form class="" action="{{URL::to('/logs')}}" method="POST">
+                                @csrf
                             <div class="form-group">
                                 <label class="col-lg-3 pl-3 pt-2 pb-2 pr-3" id="lblUsername" for="formControlDefault">Username</label>
                                 <div class="col-lg-12">
-                                    <input class="form-control" type="text" name="formControlDefault" id="Username">
+                                    <input class="form-control" type="text" name="name" id="formControlDefault">
                                 </div>
 
                                 <label class="col-lg-3 pl-3 pt-2 pb-2 pr-3" id="lblPassword" for="formControlDefault">Password</label>
                                 <div class="col-lg-12">
-                                    <input class="form-control" type="password" name="formControlDefault" id="Password">
+                                    <input class="form-control" type="password" id="formControlDefault" name="password">
                                 </div>
                             </div>
-
+                            
                             <div class="form-check m-3">
                                 <input class="form-check-input" type="checkbox" id="checkboxDefault">
                                 <label for="checkboxDefault">Remember Me</label>
                             </div>
 
                             <div class="col-lg-12">
-                                <button formaction="/home" class="btn btn-block">LOGIN</button>
+                                <button type="submit" name ="button" class="btn btn-block">LOGIN</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

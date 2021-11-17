@@ -16,11 +16,6 @@ Route::get('/', function () {
     return view('website');
 });
 
-Route::get('/login', function () {
-    return view('Login');
-});
-
-
 Route::get('/home', function () {
     return view('home');
 });
@@ -45,12 +40,21 @@ Route::get('/eventcalendar', function () {
     return view('eventcalendar');
 });
 
+Route::view('/register',"register");
+Route::post('/store',"UserController@store");
+
+Route::view('/login',"login");
+Route::post('/logs',"UserController@logs");
+
 
 
 Route::resource('/population','PopulationController');
 Route::resource('/brgyofficers','BrgyOfficialController');
 Route::resource('/eventcalendar','CalendarEventController');
 Route::resource('/home','HomeController');
+
+
+
 
 Route::get('displaydata','CalendarEventController@show');
 Route::get('/addeventurl','CalendarEventController@display');
