@@ -128,10 +128,11 @@
                                 <div class="dropdown pt-5">
                                     <button class="btn btn-primary dropdown-toggle w-75" type="button"
                                         data-toggle="dropdown">My Account
-                                    <ul class="dropdown-menu w-100">
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                                        </li>
-                                    </ul>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="fas fa-sign-out-alt"></i>Logout</a>
+                                            </li>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +158,7 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count1}}</h1>
+                                                    <h1 class="p-3 number-text">{{ $count1 }}</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +181,7 @@
                                             </div>
                                             <div class="col-lg-8 col-md-8">
                                                 <div class="number text-left">
-                                                    <h1 class="p-3 number-text">{{$count}}</h1>
+                                                    <h1 class="p-3 number-text">{{ $count }}</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,22 +193,25 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 mt-4">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="container-fluid">
-                                    <!-- ADD TABLE HERE -->
-                                        <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
+
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card pt-5">
+                                    <div class="container-fluid">
+                                        <!-- ADD TABLE HERE -->
+                                        <table id="dataTable"
+                                            class="table mt-5 table-bordered table-striped table dark">
                                             <thead class="thead-dark">
                                                 <tr>
-                                                   
+
                                                     <th scope="col">FIRST NAME</th>
                                                     <th scope="col">LAST NAME</th>
                                                     <th scope="col">MIDDLE NAME</th>
                                                     <th scope="col">BARANGAY POSITION</th>
                                                     <th scope="col">RESIDENT STATUS</th>
-                                            
-                                                    </tr>
+
+                                                </tr>
                                             </thead>
                                             <tbody class="tbody-light">
                                                 @foreach ($brgy as $brgydata)
@@ -225,46 +229,49 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="container-fluid">
+                    </div>
 
-                                    <!-- ADD TABLE HERE -->
+                    <div class="col-lg-12">
+                        <div class="card pt-5 mt-2">
+                            <div class="container-fluid">
 
-                                    <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
-                                        <thead class="thead-dark">
+                                <!-- ADD TABLE HERE -->
+
+                                <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">FIRST NAME</th>
+                                            <th scope="col">LAST NAME</th>
+                                            <th scope="col">MIDDLE NAME</th>
+                                            <th scope="col">CIVIL STATUS</th>
+                                            <th scope="col">RESIDENT STATUS</th>
+                                            <th scope="col">REGISTERED VOTER</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody-light">
+                                        @foreach ($pop as $popdata)
                                             <tr>
-                                                <th scope="col">FIRST NAME</th>
-                                                <th scope="col">LAST NAME</th>
-                                                <th scope="col">MIDDLE NAME</th>
-                                                <th scope="col">CIVIL STATUS</th>
-                                                <th scope="col">RESIDENT STATUS</th>
-                                                <th scope="col">REGISTERED VOTER</th>
-                                                
+                                                <td>{{ $popdata->fname }}</td>
+                                                <td>{{ $popdata->lname }}</td>
+                                                <td>{{ $popdata->mname }}</td>
+                                                <td>{{ $popdata->cstatus }}</td>
+                                                <td>{{ $popdata->rstatus }}</td>
+                                                <td>{{ $popdata->isvoter }}</td>
                                             </tr>
-                                        </thead>
-                                        <tbody class="tbody-light">
-                                            @foreach ($pop as $popdata)
-                                                <tr>
-                                                    <td>{{ $popdata->fname }}</td>
-                                                    <td>{{ $popdata->lname }}</td>
-                                                    <td>{{ $popdata->mname }}</td>
-                                                    <td>{{ $popdata->cstatus }}</td>
-                                                    <td>{{ $popdata->rstatus }}</td>
-                                                    <td>{{ $popdata->isvoter }}</td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
-<<<<<<< HEAD
+    </div>
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
@@ -274,11 +281,9 @@
 
             $('#dataTable1').DataTable();
 
-    
+
         });
     </script>
-=======
->>>>>>> 2b8e38942f8dcce7492ec5d209f17ee0510354b6
 </body>
 
 </html>
