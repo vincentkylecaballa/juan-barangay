@@ -192,12 +192,15 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 mt-4">
+                    <br><br>
+                    <h1 class="pt-5 home-title">Barangay Official List</h1>
+                    <br>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="container-fluid">
                                     <!-- ADD TABLE HERE -->
-                                        <table id="dataTable" class="table mt-5 table-bordered table-striped table dark">
+                                        <table id="dataTable" class="table mt-6 table-bordered table-striped table dark">
                                             <thead class="thead-dark">
                                                 <tr>
                                                    
@@ -225,13 +228,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        
+                        <h1 class="pt-5 home-title">Population List</h1>
+                        <br>
+                        <div class="row">
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="container-fluid">
 
                                     <!-- ADD TABLE HERE -->
 
-                                    <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
+                                    <table id="dataTable1" class="table mt-6 table-bordered table-striped table dark">
                                         <thead class="thead-dark">
                                             <tr>
                                                 <th scope="col">FIRST NAME</th>
@@ -259,12 +266,50 @@
                                 </div>
                             </div>
                         </div>
+                     </div>
+
+                     
+                        <h1 class="pt-5 home-title">Events List</h1>
+                        <br>
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container-fluid">
+
+                                    <!-- ADD TABLE HERE -->
+
+                                    <table id="dataTable2" class="table mt-6 table-bordered table-striped table dark">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">TITLE</th>
+                                                <th scope="col">COLOR</th>
+                                                <th scope="col">START DATE</th>
+                                                <th scope="col">END DATE</th>
+                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-light">
+                                            @foreach ($events as $event)
+                                                <tr>
+                                                    <td>{{ $event->title }}</td>
+                                                    <td>{{ $event->color }}</td>
+                                                    <td>{{ $event->start_date }}</td>
+                                                    <td>{{ $event->end_date }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
@@ -274,11 +319,9 @@
 
             $('#dataTable1').DataTable();
 
-    
+            $('#dataTable2').DataTable();
         });
     </script>
-=======
->>>>>>> 2b8e38942f8dcce7492ec5d209f17ee0510354b6
 </body>
 
 </html>
