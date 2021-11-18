@@ -171,10 +171,6 @@
                             </tbody>
                         </table>
 
-                        <a href="" class="btn btn-primary mt-3" data-toggle="modal" data-target="#BarangayOfficial"> Add
-                            Barangay Official</a>
-
-                    </div>
 
                     <a href="" class="btn btn-primary mt-3" data-toggle="modal" data-target="#BarangayOfficial"> Add
                             Barangay Official</a>

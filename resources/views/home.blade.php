@@ -193,6 +193,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 mt-4">
+<<<<<<< HEAD
 
                     <div class="col-lg-12">
                         <div class="row">
@@ -202,6 +203,17 @@
                                         <!-- ADD TABLE HERE -->
                                         <table id="dataTable"
                                             class="table mt-5 table-bordered table-striped table dark">
+=======
+                    <br><br>
+                    <h1 class="pt-5 home-title">Barangay Official List</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container-fluid">
+                                    <!-- ADD TABLE HERE -->
+                                        <table id="dataTable" class="table mt-6 table-bordered table-striped table dark">
+>>>>>>> d04530bb036c94a5e1361e2cd708648525280d67
                                             <thead class="thead-dark">
                                                 <tr>
 
@@ -229,14 +241,25 @@
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div>
 
                     <div class="col-lg-12">
                         <div class="card pt-5 mt-2">
                             <div class="container-fluid">
+=======
+                        
+                        <h1 class="pt-5 home-title">Population List</h1>
+                        <br>
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container-fluid">
+>>>>>>> d04530bb036c94a5e1361e2cd708648525280d67
 
                                 <!-- ADD TABLE HERE -->
 
+<<<<<<< HEAD
                                 <table id="dataTable1" class="table mt-5 table-bordered table-striped table dark">
                                     <thead class="thead-dark">
                                         <tr>
@@ -251,6 +274,10 @@
                                     </thead>
                                     <tbody class="tbody-light">
                                         @foreach ($pop as $popdata)
+=======
+                                    <table id="dataTable1" class="table mt-6 table-bordered table-striped table dark">
+                                        <thead class="thead-dark">
+>>>>>>> d04530bb036c94a5e1361e2cd708648525280d67
                                             <tr>
                                                 <td>{{ $popdata->fname }}</td>
                                                 <td>{{ $popdata->lname }}</td>
@@ -264,6 +291,45 @@
                                 </table>
                             </div>
                         </div>
+                     </div>
+
+                     
+                        <h1 class="pt-5 home-title">Events List</h1>
+                        <br>
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container-fluid">
+
+                                    <!-- ADD TABLE HERE -->
+
+                                    <table id="dataTable2" class="table mt-6 table-bordered table-striped table dark">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">TITLE</th>
+                                                <th scope="col">COLOR</th>
+                                                <th scope="col">START DATE</th>
+                                                <th scope="col">END DATE</th>
+                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-light">
+                                            @foreach ($events as $event)
+                                                <tr>
+                                                    <td>{{ $event->title }}</td>
+                                                    <td>{{ $event->color }}</td>
+                                                    <td>{{ $event->start_date }}</td>
+                                                    <td>{{ $event->end_date }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+
+
                     </div>
                 </div>
 
@@ -271,7 +337,10 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> d04530bb036c94a5e1361e2cd708648525280d67
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
@@ -281,7 +350,11 @@
 
             $('#dataTable1').DataTable();
 
+<<<<<<< HEAD
 
+=======
+            $('#dataTable2').DataTable();
+>>>>>>> d04530bb036c94a5e1361e2cd708648525280d67
         });
     </script>
 </body>
